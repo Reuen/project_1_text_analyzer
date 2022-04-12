@@ -53,11 +53,11 @@ else:
 text_number = input("Enter a number btw. 1 and 3 to select: ")
 
 # Overeni vyberu:
-if not text_number.isnumeric() or int(text_number) - 1 not in range(0, 3):
+if not text_number.isdigit() or int(text_number) - 1 not in range(0, 3):
     print(separator,
-          "Choice must be number between 1 to 3.",
+          "Choice must be a whole number between 1 to 3.",
           "Terminating the program...",
           separator, sep="\n")
 
-print(TEXTS[int(text_number) - 1])
+# print(TEXTS[int(text_number) - 1])
 
