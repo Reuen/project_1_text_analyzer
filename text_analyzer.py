@@ -31,10 +31,11 @@ garpike and stingray are also present.'''
 separator = "-" * 40
 registred_users = {"bob": "123", "ann": "pass123",
                    "mike": "password123", "liz": "pass123"}
-
+# Prihlaseni uzivatele:
 user = input("Username: ")
 password = input("Password: ")
 
+# Overeni a privitani uzivatele:
 if user not in registred_users or registred_users[user] != password:
     print("Invalid username or password, terminating the program...")
     quit()
