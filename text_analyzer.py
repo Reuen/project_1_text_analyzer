@@ -38,10 +38,26 @@ password = input("Password: ")
 
 # Overeni a privitani uzivatele:
 if user not in registred_users or registred_users[user] != password:
-    print("Invalid username or password, terminating the program...")
+    print(separator,
+          "Invalid username or password,",
+          "terminating the program...",
+          separator, sep="\n")
     quit()
 else:
     print(separator,
           f"Welcome to the app, {user}.",
           "We have 3 texts to be analyzed.",
           separator, sep="\n")
+
+# Vyber textu uzivatelem:
+text_number = input("Enter a number btw. 1 and 3 to select: ")
+
+# Overeni vyberu:
+if not text_number.isnumeric() or int(text_number) - 1 not in range(0, 3):
+    print(separator,
+          "Choice must be number between 1 to 3.",
+          "Terminating the program...",
+          separator, sep="\n")
+
+print(TEXTS[int(text_number) - 1])
+
