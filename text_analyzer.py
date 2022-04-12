@@ -31,6 +31,7 @@ garpike and stingray are also present.'''
 separator = "-" * 40
 registred_users = {"bob": "123", "ann": "pass123",
                    "mike": "password123", "liz": "pass123"}
+
 # Prihlaseni uzivatele:
 user = input("Username: ")
 password = input("Password: ")
