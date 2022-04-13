@@ -39,8 +39,8 @@ password = input("Password: ")
 # Overeni a privitani uzivatele:
 if user not in registred_users or registred_users[user] != password:
     print(separator,
-          "Invalid username or password,",
-          "terminating the program...",
+          "Invalid username or password!",
+          "Terminating the program...",
           separator, sep="\n")
     quit()
 else:
@@ -55,9 +55,40 @@ text_number = input("Enter a number btw. 1 and 3 to select: ")
 # Overeni vyberu:
 if not text_number.isdigit() or int(text_number) - 1 not in range(0, 3):
     print(separator,
-          "Choice must be a whole number between 1 to 3.",
+          "Choice must be a whole number btw. 1 to 3.",
           "Terminating the program...",
           separator, sep="\n")
+    quit()
 
-# print(TEXTS[int(text_number) - 1])
+# Rozdeleni slov a vytvoreni seznamu s nemi:
+words = []
 
+for word in TEXTS[int(text_number) - 1].split():
+    words.append(word.strip(" -_.!?,"))
+
+# Spocitani jednotlivych druhu slov a vypis uzivateli:
+titlecase = 0
+lowercase = 0
+uppercase = 0
+numeric = 0
+numeric_sum = 0
+
+for one_word in words:
+    if one_word.istitle():
+        titlecase += 1
+    elif one_word.islower():
+        lowercase += 1
+    elif one_word.isupper():
+        uppercase += 1
+    elif one_word.isnumeric():
+        numeric += 1
+        numeric_sum = numeric_sum + int(one_word)
+else:
+    print(separator,
+          f"There are {len(words)} words in the selected text.",
+          f"There are {titlecase} titlecase words.",
+          f"There are {uppercase} uppercase words",
+          f"There are {lowercase} lowercase words",
+          f"There are {numeric} numeric strings.",
+          f"The sum of all the numbers is {numeric_sum}.",
+          separator, sep="\n")
