@@ -5,6 +5,8 @@ author: Patrik Zezulka
 email: pat.zezulka@gmail.com
 discord: Patrik Z.#8128
 """
+
+# Pocatecni promenne:
 TEXTS = ["""
 Situated about 10 miles west of Kemmerer,
 Fossil Butte is a ruggedly impressive
@@ -101,7 +103,7 @@ else:
           f"The sum of all the numbers is {numeric_sum}.",
           separator, sep="\n")
 
-# Graf cetnosti delek slov:
+# Cetnosti delek slov:
 occurences = {}
 
 for length in words:
@@ -110,6 +112,7 @@ for length in words:
     else:
         occurences[len(length)] += 1
 
+# Graf cetnosti delek slov a jeho vypis:
 print("LEN|    OCCURENCES    |NR. ",
       separator, sep="\n")
 for key in sorted(occurences):
