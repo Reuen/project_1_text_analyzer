@@ -3,7 +3,7 @@ text_analyzer.py: První projekt do Engeto Online Python Akademie
 
 author: Patrik Zezulka
 email: pat.zezulka@gmail.com
-discord: Patrik Z.#8128
+discord: patzez#8128
 """
 
 # Pocatecni promenne:
